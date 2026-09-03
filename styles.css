@@ -1,0 +1,190 @@
+/* ===== Reset & Base ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #FAFAF8;          /* off-white — page background (matches app) */
+  --surface: #F2F2EE;     /* soft surface */
+  --sage: #93AE8F;        /* brand / buttons (matches app) */
+  --sage-dark: #7E9A7A;   /* hover */
+  --sage-pale: #EDF1EC;   /* pill background */
+  --ink: #1A1A18;         /* headings / primary text */
+  --ink-soft: #3B3B36;    /* body text */
+  --muted: #6E6E68;       /* secondary text */
+  --border: #D8D8D3;      /* subtle border */
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--ink-soft);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+main {
+  flex: 1;
+}
+
+/* ===== Header (inner pages) ===== */
+.site-header {
+  padding: 1.25rem 0;
+}
+
+.back-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: opacity 0.2s;
+}
+
+.back-link:hover {
+  opacity: 0.7;
+}
+
+/* ===== Hero ===== */
+.hero {
+  text-align: center;
+  padding: 5rem 0 2.5rem;
+}
+
+.app-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 27px; /* iOS-style squircle approximation */
+  box-shadow: 0 8px 24px rgba(26, 26, 24, 0.12);
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-size: 2.75rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  color: var(--ink);
+}
+
+.hero .tagline {
+  font-size: 1.15rem;
+  color: var(--muted);
+  max-width: 34rem;
+  margin: 0 auto 2.5rem;
+}
+
+.coming-soon {
+  display: inline-block;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--sage-pale);
+  border: 1.5px solid var(--border);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+}
+
+/* ===== Link Cards ===== */
+.link-cards {
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem 0 3rem;
+}
+
+.link-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  padding: 0.95rem 1.5rem;
+  border-radius: 14px;
+  background: var(--sage);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(26, 26, 24, 0.08);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+
+.link-card:hover {
+  background: var(--sage-dark);
+  box-shadow: 0 6px 18px rgba(26, 26, 24, 0.14);
+  transform: translateY(-2px);
+}
+
+/* ===== Content Pages ===== */
+.page-content {
+  padding: 2rem 0 4rem;
+}
+
+.page-content h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  color: var(--ink);
+}
+
+.placeholder {
+  font-size: 1.15rem;
+  color: var(--muted);
+  padding: 1rem 0 3rem;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 480px) {
+  .hero {
+    padding: 3.5rem 0 2rem;
+  }
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+  .hero .tagline {
+    font-size: 1.05rem;
+  }
+  .link-card {
+    width: 100%;
+  }
+}
