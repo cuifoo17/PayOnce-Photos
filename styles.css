@@ -17,9 +17,6 @@
   --ink-soft: #3B3B36;    /* body text */
   --muted: #6E6E68;       /* secondary text */
   --border: #D8D8D3;      /* subtle border */
-}
-
-:root {
   --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace; /* app font */
 }
 
@@ -81,7 +78,7 @@ main {
 /* ===== Hero ===== */
 .hero {
   text-align: center;
-  padding: 5rem 0 2.5rem;
+  padding: 5rem 0 3rem;
 }
 
 .hero h1 {
@@ -95,8 +92,8 @@ main {
 }
 
 .hero .lines {
-  max-width: 34rem;
-  margin: 0 auto 2.5rem;
+  text-align: left;
+  margin-bottom: 2.5rem;
 }
 
 .hero .lines p {
@@ -109,38 +106,40 @@ main {
   margin-bottom: 0;
 }
 
+/* ===== Button stack ===== */
+.stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 210px;
+  height: 48px;
+  padding: 0 1.25rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
 .coming-soon {
-  display: inline-block;
   font-family: var(--mono);
-  font-size: 0.78rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--ink);
   background: var(--sage-pale);
   border: 1.5px solid var(--border);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 0.45rem 0.9rem;
-  border-radius: 4px;
-}
-
-/* ===== Link Cards ===== */
-.link-cards {
-  display: flex;
-  justify-content: center;
-  padding: 2.5rem 0 3rem;
 }
 
 .link-card {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 220px;
-  padding: 0.95rem 1.5rem;
-  border-radius: 4px;
   background: var(--sage);
   color: #fff;
   font-weight: 600;
-  font-size: 1rem;
   box-shadow: 0 2px 8px rgba(26, 26, 24, 0.08);
   transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
 }
@@ -159,8 +158,8 @@ main {
 .page-content h1 {
   font-family: var(--mono);
   font-size: 2rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   margin-bottom: 0.5rem;
   color: var(--ink);
 }
@@ -189,8 +188,5 @@ main {
   }
   .hero .lines p {
     font-size: 1.05rem;
-  }
-  .link-card {
-    width: 100%;
   }
 }
