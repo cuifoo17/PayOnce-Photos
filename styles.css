@@ -19,6 +19,10 @@
   --border: #D8D8D3;      /* subtle border */
 }
 
+:root {
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace; /* app font */
+}
+
 html {
   font-size: 16px;
 }
@@ -80,33 +84,34 @@ main {
   padding: 5rem 0 2.5rem;
 }
 
-.app-icon {
-  width: 120px;
-  height: 120px;
-  border-radius: 27px; /* iOS-style squircle approximation */
-  box-shadow: 0 8px 24px rgba(26, 26, 24, 0.12);
-  margin-bottom: 1.5rem;
-}
-
 .hero h1 {
-  font-size: 2.75rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
-  margin-bottom: 1rem;
+  font-family: var(--mono);
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
   color: var(--ink);
 }
 
-.hero .tagline {
-  font-size: 1.15rem;
-  color: var(--muted);
+.hero .lines {
   max-width: 34rem;
   margin: 0 auto 2.5rem;
 }
 
+.hero .lines p {
+  font-size: 1.15rem;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
+
+.hero .lines p:last-child {
+  margin-bottom: 0;
+}
+
 .coming-soon {
   display: inline-block;
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-family: var(--mono);
   font-size: 0.78rem;
   font-weight: 700;
   color: var(--ink);
@@ -115,7 +120,7 @@ main {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 0.45rem 0.9rem;
-  border-radius: 999px;
+  border-radius: 4px;
 }
 
 /* ===== Link Cards ===== */
@@ -131,7 +136,7 @@ main {
   justify-content: center;
   min-width: 220px;
   padding: 0.95rem 1.5rem;
-  border-radius: 14px;
+  border-radius: 4px;
   background: var(--sage);
   color: #fff;
   font-weight: 600;
@@ -152,6 +157,7 @@ main {
 }
 
 .page-content h1 {
+  font-family: var(--mono);
   font-size: 2rem;
   font-weight: 800;
   letter-spacing: -0.02em;
@@ -179,9 +185,9 @@ main {
     padding: 3.5rem 0 2rem;
   }
   .hero h1 {
-    font-size: 2.25rem;
+    font-size: 1.85rem;
   }
-  .hero .tagline {
+  .hero .lines p {
     font-size: 1.05rem;
   }
   .link-card {
